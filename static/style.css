@@ -1,0 +1,299 @@
+:root {
+  --primario: #685044;
+  --blanco: #edf2f4;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--blanco);
+  background-image: url(/static/librooo.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Ajusta la altura al 100% del viewport */
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primario);
+}
+
+.nav-text {
+  display: flex;
+}
+
+.nav-text a {
+  color: black;
+  margin: 0px 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.nav-text a:hover {
+  border-bottom: 2px solid black;
+}
+
+.navbar--activo,
+.navbar:hover {
+  color: #edf2f4;
+}
+
+.intro {
+  margin-top: 50px;
+  height: 100%;
+  width: 100%;
+  min-height: 90vh;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+section {
+  padding: 0 15%;
+}
+
+.intro-text h1 {
+  font-size: 80px;
+  color: var(--blanco);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: var(--primario);
+}
+
+.intro-text p {
+  color: var(--blanco);
+  font-size: 22px;
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: var(--primario);
+}
+
+.botons {
+  width: 300px;
+  border: 1px solid var(--blanco);
+  border-radius: 7px;
+  padding: 10px 10px;
+  background: var(--primario);
+  color: var(--blanco);
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Facultades */
+
+.image_slider {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+  padding-left: 100px;
+}
+
+.image_slider .slide {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image_slider .slide.active {
+  opacity: 1; /* Cuando el slide tiene la clase .active, mostramos el slide estableciendo la opacidad a 1 */
+}
+
+.image_slider .slide img {
+  z-index: 1;
+  transition: transform 0.5s ease; /* Agregamos una transición para la imagen */
+}
+
+.image_slider .slide.active img {
+  transform: scale(
+    1.1
+  ); /* Aumentamos el tamaño de la imagen en el slide activo */
+}
+
+.image_slider .slide .info_slide {
+  flex: 1;
+  text-align: right;
+  padding: 20px;
+}
+
+.image_slider .slide .info_slide h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding-right: 100px;
+}
+
+.image_slider .slide .info_slide p {
+  font-size: 27px;
+  padding-left: 50px;
+  padding-right: 100px;
+}
+
+.image_slider .nav_esc {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  left: 15%;
+  bottom: 20%;
+  transform: translateX(-50%);
+}
+
+.image_slider .nav_esc .btn {
+  background: var(--primario);
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.image_slider .nav_esc .btn.active {
+  background: var(--blanco);
+}
+
+.para_fondo {
+  color: var(--blanco);
+  font-size: 22px;
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: var(--primario);
+}
+
+/*Recomendaciones*/
+
+.recomend {
+  background-color: rgba(139, 119, 119, 0.8);
+  height: 600px;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.recomend h2 {
+  text-decoration: underline;
+}
+
+.cont-recomend {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.libro-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.libro {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+
+.libro-img {
+  width: 250px;
+  padding: 40px;
+  opacity: none;
+}
+
+.libro-titulo,
+.libro-autor {
+  margin: 10px 0;
+}
+
+.pedir-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: var(
+    --primario
+  ); /* Puedes ajustar el color según tus preferencias */
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid white;
+  border-color: #edf2f4;
+  margin-top: 10px;
+}
+
+/*Pedidos*/
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 100px auto 20px; /* Ajusta el margen superior según tus preferencias */
+  width: 50%; /* O ajusta el ancho según tus preferencias */
+  max-width: 600px; /* Ajusta el ancho máximo según tus preferencias */
+}
+
+.form-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: var(--primario);
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--primario);
+  border-radius: 5px;
+}
+
+.form-btn {
+  background-color: var(--primario);
+  color: var(--blanco);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.success {
+  color: green; 
+}
+
+.danger {
+  color: red; 
+}

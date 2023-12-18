@@ -4,7 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -17,13 +18,14 @@
     <body>
 
         <header>
-            <a href="index.html" target="_self"><img src="libropng.png" alt="Libro logo" width="80px"></a>
+            <a href="{{ url_for('index') }}" target="_self"><img src="{{ url_for('static', filename='libropng.png') }}"
+                    alt="Libro logo" width="80px"></a>
             <nav>
                 <ul class="nav-text">
-                    <li><a href="index.html" class="navbar navbar--activo">Inicio</a></li>
-                    <li><a href="facultades.html" class="navbar navbar--activo">Facultades</a></li>
-                    <li><a href="catalogo.html" class="navbar navbar--activo">Catálogo</a></li>
-                    <li><a href="pedidos.html" class="navbar navbar--activo">Pedidos</a></li>
+                    <li><a href="{{ url_for('index') }}" class="navbar navbar--activo">Inicio</a></li>
+                    <li><a href="{{ url_for('facultades') }}" class="navbar navbar--activo">Facultades</a></li>
+                    <li><a href="{{ url_for('recomend') }}" class="navbar navbar--activo">Recomendaciones</a></li>
+                    <li><a href="{{ url_for('pedidos') }}" class="navbar navbar--activo">Pedidos</a></li>
                 </ul>
             </nav>
         </header>
@@ -42,13 +44,10 @@
                     plataforma que opera bajo el lema "Compartir para Crecer".
                 </p>
 
-                <a href="pedidos.html" class="botons">Reserva ya</a>
+                <a href="{{ url_for('pedidos') }}" class="botons">Reserva ya</a>
 
             </div>
-
-
         </section>
-
 
     </body>
 

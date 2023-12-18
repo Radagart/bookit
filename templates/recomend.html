@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Staatliches&display=swap"
+            rel="stylesheet">
+
+        <title>BookIT</title>
+    </head>
+
+    <body>
+
+        <header>
+            <a href="{{ url_for('index') }}" target="_self"><img src="{{ url_for('static', filename='libropng.png') }}"
+                    alt="Libro logo" width="80px"></a>
+            <nav>
+                <ul class="nav-text">
+                    <li><a href="{{ url_for('index') }}" class="navbar navbar--activo">Inicio</a></li>
+                    <li><a href="{{ url_for('facultades') }}" class="navbar navbar--activo">Facultades</a></li>
+                    <li><a href="{{ url_for('recomend') }}" class="navbar navbar--activo">Recomendaciones</a></li>
+                    <li><a href="{{ url_for('pedidos') }}" class="navbar navbar--activo">Pedidos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="recomend">
+            <!-- Contenido dentro del div gris (opcional) -->
+            <div class="cont-recomend">
+                <h2>Recomendaciones</h2>
+                <!-- Contenedor de libros -->
+                <div class="libro-container">
+                    <!-- Libro 1 -->
+                    <div class="libro">
+                        <img src="{{ url_for('static', filename='imguse/dummies.jpg') }}" alt="Libro 1"
+                            class="libro-img">
+                        <h3 class="libro-titulo">HTML & CSS for dummies</h3>
+                        <p class="libro-autor">Ed Tittel</p>
+                        <a href="https://www.amazon.com/HTML-XHTML-CSS-Dummies-7th/dp/0470916591" target="_blank"
+                            class="pedir-btn">Pedilo</a>
+                    </div>
+
+                    <!-- Libro 2 -->
+                    <div class="libro">
+                        <img src="{{ url_for('static', filename='imguse/starch.jpg') }}" alt="Libro 2"
+                            class="libro-img">
+                        <h3 class="libro-titulo">How Linux Works</h3>
+                        <p class="libro-autor">No Starch Press</p>
+                        <a href="https://www.amazon.com/How-Linux-Works-Brian-Ward/dp/1718500408" target="_blank"
+                            class="pedir-btn">Pedilo</a>
+                    </div>
+
+                    <!-- Libro 3 -->
+                    <div class="libro">
+                        <img src="{{ url_for('static', filename='imguse/tren.jpg') }}" alt="Libro 3" class="libro-img">
+                        <h3 class="libro-titulo">La Chica del tren</h3>
+                        <p class="libro-autor">Paula Hawkins</p>
+                        <a href="https://www.casadellibro.com/libro-la-chica-del-tren/9788408141471/2544161"
+                            target="_blank" class="pedir-btn">Pedilo</a>
+                    </div>
+
+                    <!-- Libro 4 -->
+                    <div class="libro">
+                        <img src="{{ url_for('static', filename='imguse/psicoanalista.jpg') }}" alt="Libro 4"
+                            class="libro-img">
+                        <h3 class="libro-titulo">El Psicoanalista</h3>
+                        <p class="libro-autor">John Katzenbach</p>
+                        <a href="https://www.amazon.com/-/es/John-Katzenbach/dp/8466665072" target="_blank"
+                            class="pedir-btn">Pedilo</a>
+                    </div>
+
+                    <!-- Libro 5 -->
+                    <div class="libro">
+                        <img src="{{ url_for('static', filename='imguse/itlibro.jpg') }}" alt="Libro 5"
+                            class="libro-img">
+                        <h3 class="libro-titulo">IT</h3>
+                        <p class="libro-autor">Stephen King</p>
+                        <a href="https://www.amazon.com/-/es/Stephen-King/dp/0525566260" target="_blank"
+                            class="pedir-btn">Pedilo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
